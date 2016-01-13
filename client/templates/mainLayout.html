@@ -1,0 +1,24 @@
+<template name="mainLayout">
+  {{> topheader}}
+  {{> title}}
+  {{> midnav}}
+
+      <!-- CONTENT - START -->
+      <div class="container">
+          <section class="content-wrapper">
+          	<div class="row">
+              <!-- Middle body content : varies-->
+              {{> Template.dynamic template=main}}
+              {{> Template.dynamic template=sidebar}}
+            </div>
+          </section>
+      </div>
+          <!-- CONTENT - END -->
+
+         	<!-- FOOTER - START -->
+          <div class="container">
+      {{> footerbox}}
+      {{> footer}}
+          </div>
+          <!-- FOOTER - END -->
+</template>

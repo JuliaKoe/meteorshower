@@ -1,0 +1,44 @@
+<template name="midnav">
+      <!-- ==========================
+      	MID NAV ACTION BUTTONS- START
+      =========================== -->
+      <div class="container">
+      	<div class="jumbotron">
+          	<div class="jumbotron-panel">
+              	<div class="panel panel-primary collapse-horizontal">
+                      <a  class="btn btn-primary">Call To Action</a>
+                      <div class="jumbotron-brands">
+                      	<ul class="brands brands-sm brands-inline brands-circle">
+                      		<li><a href="" data-tooltip="Updates"><i class="fa fa-rss"></i></a></li>
+                              <li><a href="" data-tooltip="Chat"><i class="fa fa-comments"></i></a></li>
+                              {{#if currentUser}}
+                                <li><a href="/landing" data-tooltip="Main"><i class="fa fa-bar-chart"></i></a></li>
+                              {{else}}
+                                <li><a href="/login" data-tooltip="Main"><i class="fa fa-bar-chart"></i></a></li>
+                              {{/if}}
+                              {{#if currentUser}}
+                                <li><a href="/profile" data-tooltip="Profile"><i class="fa fa-user-plus"></i></a></li>
+                              {{else}}
+                                <li><a href="/login" data-tooltip="Profile"><i class="fa fa-user-plus"></i></a></li>
+                              {{/if}}
+                              {{#if currentUser}}
+                                <li><a href="#" data-tooltip="Log out" class="logout"><i class="fa fa-lock"></i></a></li>
+                              {{else}}
+                                <li><a href="/login" data-tooltip="Log in"><i class="fa fa-sign-in"></i></a></li>
+                              {{/if}}
+                          </ul>
+                      </div>
+                      <div id="toggle-collapse" class="panel-collapse collapse">
+                          <div class="panel-body">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+      <!-- ==========================
+      	MID NAV ACTION BUTTONS - END
+      =========================== -->
+</template>

@@ -1,0 +1,97 @@
+<template name="profile">
+  <div class="col-sm-8">
+    <div class="box">
+
+          <!-- TEAM MEMBER - START -->
+          <div class="team-member single">
+              <div class="row">
+                  <div class="col-sm-4 col-md-3">
+                    {{#if myProfile.avatarImage}}
+                    <img src="{{myProfile.avatarImage}}" class="img-responsive img-circle center-block" alt="">
+                    {{else}}
+                      <img src="images/avatarplaceholder.png" class="img-responsive img-circle center-block" alt="">
+                    {{/if}}
+                    <ul class="brands brands-tn brands-circle brands-colored brands-inline text-center">
+                          <li><i class="fa fa-check-square-o fa-2x"></i> 45%</li>
+                          <li><i class="fa  fa-trophy fa-2x"></i> 53rd</li>
+                          <li><b>12</b> Follwers</li>
+                          <li><b>25</b> Following</li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-8 col-md-9">
+                      <h2>Username: {{currentUser.username}}</h2>
+                      <ul class="list-unstyled">
+                          <li><strong>Member since:</strong> {{myProfile.profileCreateDate}}</li>
+                          <li><strong>User Level:</strong> {{myProfile.userLevel}}</li>
+                          <li><strong>Level Type:</strong> {{myProfile.userLevelDescription}}</li>
+                          <li><strong>Email:</strong> {{currentUser.emails.[0].address}}</li>
+                      </ul>
+                      <p>About Me: {{#if myProfile.aboutMe}}
+                        {{myProfile.aboutMe}}
+                        {{else}}
+                        Description not provided
+                        {{/if}}
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <!-- TEAM MEMBER - END -->
+      </div>
+
+      <div class="box colored config">
+        <select class="form-control">
+          <option>Sport</option>
+          <option>Baseball</option>
+          <option>Football</option>
+          <option>Chess</option>
+        </select>
+      </div>
+
+      <div class="box hardware">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="team-member">
+                  <table class="table table-bordered table-responsive">
+                    <thead>
+                      <tr>
+                    <th>Win</th><th>Loss</th><th>Push</th><th>Accuracy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr><td>45</td><td>32</td><td>23</td><td>37%</td></tr>
+                </tbody>
+                  </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+              <div class="box sidebar-box widget-wrapper">
+                  <h3>Lorem ipsum</h3>
+                  <ul class="nav nav-sidebar">
+                      <li><a href="#">Lorem ipsum dolor sit<span>3/2/2015</span></a></li>
+                      <li><a href="#">consectetur adipiscing<span>3/2/2015</span></a></li>
+                      <li><a href="#">Nam auctor dictum<span>3/2/2015</span></a></li>
+                  </ul>
+              </div>
+        </div>
+
+          <div class="col-md-6">
+              <div class="box sidebar-box widget-wrapper">
+                  <h3>Lorem ipsum</h3>
+                  <ul class="nav nav-sidebar">
+                      <li><a href="#">Lorem ipsum dolor sit<span>3/2/2015</span></a></li>
+                      <li><a href="#">consectetur adipiscing<span>3/2/2015</span></a></li>
+                      <li><a href="#">Nam auctor dictum<span>3/2/2015</span></a></li>
+                  </ul>
+              </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="http://placehold.it/800x600" class="img-responsive" alt="">
+    </div>
+  </div>
+</template>
