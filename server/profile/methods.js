@@ -5,7 +5,11 @@ Meteor.publish('myProfile', function(){
 
 Meteor.methods({
   //insert default profile on user creation
-  'insertDefaultProfile' : function(userLevel, userLevelDescription, userLevelExpiration){
+  'insertDefaultProfile' : function(){
+    var userLevel = 'Level 1';
+    var userLevelDescription = 'Free Level';
+    var userLevelExpiration = new Date(2099,0,1);
+    
     var currentUserId = Meteor.userId();
     Profile.insert({userId: currentUserId,
       userLevel: userLevel,

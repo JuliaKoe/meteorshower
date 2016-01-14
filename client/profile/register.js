@@ -33,7 +33,9 @@ Template.register.events({
             //if user created, add addtitional fields
             var user = Meteor.users.findOne({"_id": Meteor.userId()});
 
-            Meteor.call('insertDefaultProfile','Level 1', 'Free Level', new Date(2099,0,1));
+            //Moved hard coded values to server code
+//            Meteor.call('insertDefaultProfile','Level 1', 'Free Level', new Date(2099,0,1));
+            Meteor.call('insertDefaultProfile');
             FlowRouter.go('/profile');
           }
         }
